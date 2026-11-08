@@ -121,26 +121,40 @@
     "src": "02.jpg",
     "sm": "02-sm.jpg",
     "w": 2000,
-    "h": 1125
+    "h": 953
    },
    {
     "type": "image",
     "src": "03.jpg",
     "sm": "03-sm.jpg",
     "w": 2000,
-    "h": 1125
+    "h": 953
    },
    {
     "type": "image",
     "src": "04.jpg",
     "sm": "04-sm.jpg",
     "w": 2000,
-    "h": 1125
+    "h": 953
    },
    {
     "type": "image",
     "src": "05.jpg",
     "sm": "05-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   },
+   {
+    "type": "image",
+    "src": "06.jpg",
+    "sm": "06-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   },
+   {
+    "type": "image",
+    "src": "07.jpg",
+    "sm": "07-sm.jpg",
     "w": 2000,
     "h": 1125
    }
