@@ -64,7 +64,7 @@ def page(title, desc, body, depth, head_class="page", path=""):
 <body>
 <header class="site-head {head_class}"><div class="wrap">
 <a class="brand" href="{up}">okamoto<span>designs</span></a>
-<nav class="nav"><a href="{up}#work">Work</a><a class="hide-sm" href="{up}#about">About</a><a class="hide-sm" href="{up}beamcalc/">Tools</a><a href="{up}#contact">Contact</a></nav>
+<nav class="nav"><a href="{up}#work">Work</a><a href="{up}#about">About</a><a href="{up}beamcalc/">Tools</a><a href="{up}#contact">Contact</a></nav>
 </div></header>
 {body}
 <footer><div class="wrap"><span>&copy; okamotodesigns. Michael "Shadow" Okamoto, Orlando, Florida.</span><span><a href="mailto:{EMAIL}">{EMAIL}</a></span></div></footer>

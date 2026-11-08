@@ -29,7 +29,13 @@ a:hover { text-decoration: underline; }
 .nav { display: flex; gap: 24px; font-size: 15px; }
 .nav a { color: #c9d1d9; }
 .nav a:hover { color: #fff; text-decoration: none; }
-@media (max-width: 640px) { .nav .hide-sm { display: none; } .nav { gap: 16px; } }
+@media (max-width: 640px) {
+  .site-head .wrap { flex-direction: column; justify-content: center; align-items: center; height: auto; padding-top: 10px; padding-bottom: 8px; gap: 6px; }
+  .brand { font-size: 22px; }
+  .nav { gap: 18px; font-size: 14px; }
+  .project-head { padding-top: 130px; }
+  .prose { padding-top: 130px; }
+}
 
 /* Hero */
 .hero { position: relative; height: 100vh; min-height: 560px; max-height: 1000px; overflow: hidden; background: #000; }
