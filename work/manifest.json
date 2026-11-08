@@ -281,55 +281,6 @@
  },
  {
   "lane": "Electrics and Production",
-  "folder": "Arena show Oct 2024 (Master Electrician)",
-  "slug": "arena-show-oct-2024",
-  "items": [
-   {
-    "type": "image",
-    "src": "01.jpg",
-    "sm": "01-sm.jpg",
-    "w": 2000,
-    "h": 924
-   }
-  ]
- },
- {
-  "lane": "Electrics and Production",
-  "folder": "Circular truss rig 2024 (Ground Control Tech)",
-  "slug": "circular-truss-rig-2024",
-  "items": [
-   {
-    "type": "image",
-    "src": "01.jpg",
-    "sm": "01-sm.jpg",
-    "w": 2000,
-    "h": 924
-   },
-   {
-    "type": "image",
-    "src": "02.jpg",
-    "sm": "02-sm.jpg",
-    "w": 2000,
-    "h": 924
-   },
-   {
-    "type": "video",
-    "src": "03.mp4",
-    "poster": "03-poster.jpg",
-    "w": 1280,
-    "h": 720
-   },
-   {
-    "type": "video",
-    "src": "04.mp4",
-    "poster": "04-poster.jpg",
-    "w": 720,
-    "h": 1280
-   }
-  ]
- },
- {
-  "lane": "Electrics and Production",
   "folder": "Immersive Disney Animation (Production Electrician and EIC)",
   "slug": "immersive-disney-animation",
   "items": [
@@ -427,34 +378,6 @@
   ]
  },
  {
-  "lane": "Electrics and Production",
-  "folder": "Stadium show Nov 2023 (Master Electrician)",
-  "slug": "stadium-show-nov-2023",
-  "items": [
-   {
-    "type": "image",
-    "src": "01.jpg",
-    "sm": "01-sm.jpg",
-    "w": 2000,
-    "h": 1395
-   },
-   {
-    "type": "image",
-    "src": "02.jpg",
-    "sm": "02-sm.jpg",
-    "w": 2000,
-    "h": 1395
-   },
-   {
-    "type": "image",
-    "src": "03.jpg",
-    "sm": "03-sm.jpg",
-    "w": 1500,
-    "h": 2000
-   }
-  ]
- },
- {
   "lane": "Lighting Design and Programming",
   "folder": "Omnis Awards 2015 (Lighting Designer)",
   "slug": "omnis-awards-2015",
@@ -514,6 +437,41 @@
     "poster": "08-poster.jpg",
     "w": 1280,
     "h": 676
+   }
+  ]
+ },
+ {
+  "lane": "Electrics and Production",
+  "folder": "Stadium Shows (Master Electrician)",
+  "slug": "stadium-shows",
+  "items": [
+   {
+    "type": "image",
+    "src": "01.jpg",
+    "sm": "01-sm.jpg",
+    "w": 2000,
+    "h": 1395
+   },
+   {
+    "type": "image",
+    "src": "02.jpg",
+    "sm": "02-sm.jpg",
+    "w": 2000,
+    "h": 1395
+   },
+   {
+    "type": "image",
+    "src": "03.jpg",
+    "sm": "03-sm.jpg",
+    "w": 1500,
+    "h": 2000
+   },
+   {
+    "type": "image",
+    "src": "04.jpg",
+    "sm": "04-sm.jpg",
+    "w": 2000,
+    "h": 924
    }
   ]
  }

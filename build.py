@@ -26,13 +26,11 @@ SHOWS = {
     "mtn-dew-nba-all-star-2020": ("Mtn Dew at NBA All-Star", "Sceptron Tech", "2020", "Sceptron LED for the Mtn Dew activation in Chicago."),
     "immersive-van-gogh": ("Immersive Van Gogh", "Production Electrician and EIC", "2020 to 2023", "Lighting and video power, network, and signal for immersive venues across the US and Canada, including the mirror forest in Denver."),
     "immersive-disney-animation": ("Immersive Disney Animation", "Production Electrician and EIC", "2023", "Power, network, and signal for the projection rooms."),
-    "stadium-show-nov-2023": ("Stadium Show", "Master Electrician", "2023", "Stadium floor stage with LED towers."),
-    "arena-show-oct-2024": ("Arena Show", "Master Electrician", "2024", "Arena stage with LED screens and beam rig."),
-    "circular-truss-rig-2024": ("Circular Truss Rig", "Ground Control Tech", "2024", "Circular truss and LED ring rig, from build to rehearsal."),
+    "stadium-shows": ("Stadium Shows", "Master Electrician", "2023 to 2024", "Stadium and arena stages with LED towers, screens, and beam rigs."),
 }
 ORDER = ["awhonn-2026", "sibos-miami-2026", "fnce-2025", "omnis-awards-2015", "nea-2014",
          "ucf-go-for-launch-2026", "organogenesis-live-2025", "cornerstone-young-living-2022", "mtn-dew-nba-all-star-2020",
-         "immersive-van-gogh", "immersive-disney-animation", "circular-truss-rig-2024", "arena-show-oct-2024", "stadium-show-nov-2023"]
+         "immersive-van-gogh", "immersive-disney-animation", "stadium-shows"]
 
 CLIENTS = ["National Education Association", "Lighthouse Immersive", "PRG", "4Wall", "LMG", "Christie Lites", "Cornerstone",
            "NFL Kickoff", "NFL Super Bowl", "MLB All-Star Game", "General Electric", "Bentley Motors", "SpaceX",
