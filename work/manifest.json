@@ -1,0 +1,443 @@
+[
+ {
+  "lane": "Lighting Design and Programming",
+  "folder": "AWHONN 2026 (LD and Programmer)",
+  "slug": "awhonn-2026",
+  "items": [
+   {
+    "type": "image",
+    "src": "01.jpg",
+    "sm": "01-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   },
+   {
+    "type": "image",
+    "src": "02.jpg",
+    "sm": "02-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   },
+   {
+    "type": "video",
+    "src": "03.mp4",
+    "poster": "03-poster.jpg",
+    "w": 1280,
+    "h": 720
+   }
+  ]
+ },
+ {
+  "lane": "Lighting Design and Programming",
+  "folder": "FNCE 2025 (LD and Programmer)",
+  "slug": "fnce-2025",
+  "items": [
+   {
+    "type": "image",
+    "src": "01.jpg",
+    "sm": "01-sm.jpg",
+    "w": 2000,
+    "h": 924
+   },
+   {
+    "type": "image",
+    "src": "02.jpg",
+    "sm": "02-sm.jpg",
+    "w": 2000,
+    "h": 924
+   },
+   {
+    "type": "image",
+    "src": "03.jpg",
+    "sm": "03-sm.jpg",
+    "w": 2000,
+    "h": 924
+   },
+   {
+    "type": "image",
+    "src": "04.jpg",
+    "sm": "04-sm.jpg",
+    "w": 2000,
+    "h": 924
+   }
+  ]
+ },
+ {
+  "lane": "Lighting Design and Programming",
+  "folder": "NEA 2014 (LD and Programmer)",
+  "slug": "nea-2014",
+  "items": [
+   {
+    "type": "image",
+    "src": "01.jpg",
+    "sm": "01-sm.jpg",
+    "w": 2000,
+    "h": 1500
+   },
+   {
+    "type": "image",
+    "src": "02.jpg",
+    "sm": "02-sm.jpg",
+    "w": 2000,
+    "h": 1500
+   }
+  ]
+ },
+ {
+  "lane": "Lighting Design and Programming",
+  "folder": "Sibos Miami 2026 (LD and Programmer)",
+  "slug": "sibos-miami-2026",
+  "items": [
+   {
+    "type": "image",
+    "src": "01.jpg",
+    "sm": "01-sm.jpg",
+    "w": 2000,
+    "h": 1046
+   },
+   {
+    "type": "image",
+    "src": "02.jpg",
+    "sm": "02-sm.jpg",
+    "w": 2000,
+    "h": 1046
+   }
+  ]
+ },
+ {
+  "lane": "Media and Sceptron",
+  "folder": "Cornerstone Young Living 2022 (Media Servers)",
+  "slug": "cornerstone-young-living-2022",
+  "items": [
+   {
+    "type": "image",
+    "src": "01.jpg",
+    "sm": "01-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   },
+   {
+    "type": "image",
+    "src": "02.jpg",
+    "sm": "02-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   },
+   {
+    "type": "image",
+    "src": "03.jpg",
+    "sm": "03-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   },
+   {
+    "type": "image",
+    "src": "04.jpg",
+    "sm": "04-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   },
+   {
+    "type": "image",
+    "src": "05.jpg",
+    "sm": "05-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   }
+  ]
+ },
+ {
+  "lane": "Media and Sceptron",
+  "folder": "Mtn Dew NBA All-Star 2020 (Sceptron Tech)",
+  "slug": "mtn-dew-nba-all-star-2020",
+  "items": [
+   {
+    "type": "image",
+    "src": "01.jpg",
+    "sm": "01-sm.jpg",
+    "w": 2000,
+    "h": 953
+   },
+   {
+    "type": "image",
+    "src": "02.jpg",
+    "sm": "02-sm.jpg",
+    "w": 2000,
+    "h": 953
+   },
+   {
+    "type": "image",
+    "src": "03.jpg",
+    "sm": "03-sm.jpg",
+    "w": 2000,
+    "h": 953
+   }
+  ]
+ },
+ {
+  "lane": "Media and Sceptron",
+  "folder": "Organogenesis LIVE 2025 (Sceptron Tech)",
+  "slug": "organogenesis-live-2025",
+  "items": [
+   {
+    "type": "video",
+    "src": "01.mp4",
+    "poster": "01-poster.jpg",
+    "w": 1280,
+    "h": 720
+   },
+   {
+    "type": "image",
+    "src": "02.jpg",
+    "sm": "02-sm.jpg",
+    "w": 2000,
+    "h": 924
+   },
+   {
+    "type": "video",
+    "src": "03.mp4",
+    "poster": "03-poster.jpg",
+    "w": 1280,
+    "h": 720
+   },
+   {
+    "type": "video",
+    "src": "04.mp4",
+    "poster": "04-poster.jpg",
+    "w": 1280,
+    "h": 720
+   },
+   {
+    "type": "image",
+    "src": "05.jpg",
+    "sm": "05-sm.jpg",
+    "w": 2000,
+    "h": 924
+   },
+   {
+    "type": "image",
+    "src": "06.jpg",
+    "sm": "06-sm.jpg",
+    "w": 2000,
+    "h": 924
+   }
+  ]
+ },
+ {
+  "lane": "Media and Sceptron",
+  "folder": "UCF Go For Launch 2026 (Sceptron Tech)",
+  "slug": "ucf-go-for-launch-2026",
+  "items": [
+   {
+    "type": "video",
+    "src": "01.mp4",
+    "poster": "01-poster.jpg",
+    "w": 1280,
+    "h": 720
+   },
+   {
+    "type": "image",
+    "src": "02.jpg",
+    "sm": "02-sm.jpg",
+    "w": 2000,
+    "h": 1126
+   },
+   {
+    "type": "video",
+    "src": "03.mp4",
+    "poster": "03-poster.jpg",
+    "w": 1280,
+    "h": 720
+   },
+   {
+    "type": "video",
+    "src": "04.mp4",
+    "poster": "04-poster.jpg",
+    "w": 720,
+    "h": 1280
+   },
+   {
+    "type": "video",
+    "src": "06.mp4",
+    "poster": "06-poster.jpg",
+    "w": 720,
+    "h": 1280
+   }
+  ]
+ },
+ {
+  "lane": "Electrics and Production",
+  "folder": "Arena show Oct 2024 (Master Electrician)",
+  "slug": "arena-show-oct-2024",
+  "items": [
+   {
+    "type": "image",
+    "src": "01.jpg",
+    "sm": "01-sm.jpg",
+    "w": 2000,
+    "h": 924
+   }
+  ]
+ },
+ {
+  "lane": "Electrics and Production",
+  "folder": "Circular truss rig 2024 (Ground Control Tech)",
+  "slug": "circular-truss-rig-2024",
+  "items": [
+   {
+    "type": "image",
+    "src": "01.jpg",
+    "sm": "01-sm.jpg",
+    "w": 2000,
+    "h": 924
+   },
+   {
+    "type": "image",
+    "src": "02.jpg",
+    "sm": "02-sm.jpg",
+    "w": 2000,
+    "h": 924
+   },
+   {
+    "type": "video",
+    "src": "03.mp4",
+    "poster": "03-poster.jpg",
+    "w": 1280,
+    "h": 720
+   },
+   {
+    "type": "video",
+    "src": "04.mp4",
+    "poster": "04-poster.jpg",
+    "w": 720,
+    "h": 1280
+   }
+  ]
+ },
+ {
+  "lane": "Electrics and Production",
+  "folder": "Immersive Disney Animation (Production Electrician and EIC)",
+  "slug": "immersive-disney-animation",
+  "items": [
+   {
+    "type": "image",
+    "src": "01.jpg",
+    "sm": "01-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   },
+   {
+    "type": "image",
+    "src": "02.jpg",
+    "sm": "02-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   },
+   {
+    "type": "image",
+    "src": "03.jpg",
+    "sm": "03-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   },
+   {
+    "type": "image",
+    "src": "04.jpg",
+    "sm": "04-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   }
+  ]
+ },
+ {
+  "lane": "Electrics and Production",
+  "folder": "Immersive Van Gogh (Production Electrician and EIC)",
+  "slug": "immersive-van-gogh",
+  "items": [
+   {
+    "type": "image",
+    "src": "01.jpg",
+    "sm": "01-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   },
+   {
+    "type": "video",
+    "src": "02.mp4",
+    "poster": "02-poster.jpg",
+    "w": 1280,
+    "h": 720
+   },
+   {
+    "type": "image",
+    "src": "03.jpg",
+    "sm": "03-sm.jpg",
+    "w": 2400,
+    "h": 600
+   },
+   {
+    "type": "video",
+    "src": "04.mp4",
+    "poster": "04-poster.jpg",
+    "w": 1280,
+    "h": 720
+   },
+   {
+    "type": "video",
+    "src": "05.mp4",
+    "poster": "05-poster.jpg",
+    "w": 1280,
+    "h": 720
+   },
+   {
+    "type": "image",
+    "src": "06.jpg",
+    "sm": "06-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   },
+   {
+    "type": "image",
+    "src": "07.jpg",
+    "sm": "07-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   },
+   {
+    "type": "image",
+    "src": "08.jpg",
+    "sm": "08-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   }
+  ]
+ },
+ {
+  "lane": "Electrics and Production",
+  "folder": "Stadium show Nov 2023 (Master Electrician)",
+  "slug": "stadium-show-nov-2023",
+  "items": [
+   {
+    "type": "image",
+    "src": "01.jpg",
+    "sm": "01-sm.jpg",
+    "w": 2000,
+    "h": 1395
+   },
+   {
+    "type": "image",
+    "src": "02.jpg",
+    "sm": "02-sm.jpg",
+    "w": 2000,
+    "h": 1395
+   },
+   {
+    "type": "image",
+    "src": "03.jpg",
+    "sm": "03-sm.jpg",
+    "w": 1500,
+    "h": 2000
+   }
+  ]
+ }
+]
