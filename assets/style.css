@@ -127,3 +127,4 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 .hero h1 em { font-style: normal; color: #7ff0e4; text-shadow: 0 0 22px rgba(46,196,182,.9), 0 0 6px rgba(127,240,228,.8); }
 .brand span { text-shadow: 0 0 12px rgba(46,196,182,.6); }
 .gallery > img, .gallery > video { aspect-ratio: 4 / 3; height: auto; }
+.apps { display: grid; gap: 14px; max-width: 640px; }

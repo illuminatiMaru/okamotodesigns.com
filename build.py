@@ -62,7 +62,7 @@ def page(title, desc, body, depth, head_class="page", path=""):
 <body>
 <header class="site-head {head_class}"><div class="wrap">
 <a class="brand" href="{up}">okamoto<span>designs</span></a>
-<nav class="nav"><a href="{up}#work">Work</a><a href="{up}#about">About</a><a href="{up}beamcalc/">Tools</a><a href="{up}#contact">Contact</a></nav>
+<nav class="nav"><a href="{up}#work">Work</a><a href="{up}#about">About</a><a href="{up}#tools">Tools</a><a href="{up}#contact">Contact</a></nav>
 </div></header>
 {body}
 <footer><div class="wrap"><span>&copy; okamotodesigns. Michael "Shadow" Okamoto, Orlando, Florida.</span><span><a href="mailto:{EMAIL}">{EMAIL}</a></span></div></footer>
@@ -142,10 +142,13 @@ def build():
 <ul class="clients">{''.join(f'<li>{e(c)}</li>' for c in CLIENTS)}</ul>
 </div></section>
 
-<section class="alt"><div class="wrap">
+<section id="tools" class="alt"><div class="wrap">
 <h2>Tools I build</h2>
 <p class="sub">Small apps for the job, made by a working LD.</p>
+<div class="apps">
 <a class="app" href="beamcalc/"><img src="beamcalc/img/icon.png" alt=""><div><h3>Photon BeamCalc</h3><p>Throw distance, beam size, lens angle, and raked floor pools. Android, iPhone coming.</p></div></a>
+<a class="app" href="fixtures/"><img src="fixtures/img/icon.png" alt=""><div><h3>Photon Fixtures</h3><p>Fixture modes, DMX charts, chain math, and patch sheets on your phone. In private testing.</p></div></a>
+</div>
 </div></section>
 
 <section id="contact" class="contact"><div class="wrap">
@@ -200,6 +203,34 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
 """
         open(os.path.join(ROOT, "work", slug, "index.html"), "w", encoding="utf-8").write(
             page(f"{title} | {role} | okamotodesigns", f"{title}, {year}. {role}. {blurb}", body, 2, path=f"work/{slug}/"))
+
+    # Photon Fixtures page. Open Fixture Library only: nothing about GDTF until GDTF answers the licensing email (sent 2026-11-06).
+    fx = f"""
+<div class="wrap prose">
+<p><a href="../">&larr; okamotodesigns</a></p>
+<div class="app" style="border:0;padding:0;background:none"><img src="img/icon.png" alt=""><div><h1>Photon Fixtures</h1><p class="date">A fixture and patch app from okamotodesigns, in private testing</p></div></div>
+<p>The answers you go hunting for in a PDF manual at load-in, on your phone: what a fixture's modes are, what every channel does, how many fit in a universe, and where each one lands in the patch.</p>
+<h2>What it does</h2>
+<ul>
+<li>Search hundreds of fixtures and pick a mode to see every DMX channel, its default, and its value ranges.</li>
+<li>Chain math: how many fit in a universe with no fixture split, and the total channels for any count.</li>
+<li>Build a patch: add fixtures by quantity and position, start new universes, and get each unit's address and fixture number.</li>
+<li>Export a clean patch sheet as a PDF or spreadsheet to print or send to the crew.</li>
+<li>Works offline. No ads, no accounts needed for the built-in library.</li>
+</ul>
+<div class="shots"><img src="img/fixture.jpg" alt="Fixture screen with mode, chain math, and channel list"><img src="img/patch.jpg" alt="Patch screen with fixture counts and addresses"></div>
+<h2>Patch sheet export</h2>
+<p><img src="img/patch-pdf.png" alt="Exported patch sheet, Universe 1" style="border-radius:8px;background:#fff"></p>
+<p>Fixture definitions are community-written. Check them against the manufacturer's chart before you trust them on a show.</p>
+<h2>Want to test it?</h2>
+<p>Photon Fixtures is in private testing on Android. If you program or patch rigs and want to try it, <a href="mailto:{EMAIL}?subject=Photon%20Fixtures%20testing">send me a note</a>.</p>
+<h2>Credits</h2>
+<p class="date">Built-in fixture library from the <a href="https://open-fixture-library.org/">Open Fixture Library</a>, used under the MIT License.</p>
+</div>
+"""
+    os.makedirs(os.path.join(ROOT, "fixtures"), exist_ok=True)
+    open(os.path.join(ROOT, "fixtures", "index.html"), "w", encoding="utf-8").write(
+        page("Photon Fixtures | okamotodesigns", "Fixture modes, DMX charts, chain math, and patch sheets on your phone.", fx, 1, path="fixtures/"))
 
     # BeamCalc landing page.
     bc = """
