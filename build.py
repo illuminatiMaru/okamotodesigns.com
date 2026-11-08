@@ -22,7 +22,7 @@ SHOWS = {
     "nea-2014": ("National Education Association", "LD and Programmer", "2014", "Convention general session."),
     "ucf-go-for-launch-2026": ("UCF Go For Launch", "Sceptron Tech", "2026", "LED tube tunnels in the arena hallways and the ballroom LED wall."),
     "organogenesis-live-2025": ("Organogenesis LIVE", "Sceptron Tech", "2025", "Sceptron LED across the general session sets, including the Sky Full of Stars and JCB sessions."),
-    "cornerstone-young-living-2022": ("Young Living, with Cornerstone", "Media Servers", "2017 to 2022", "Media servers for Young Living, from the outdoor stage at Rice-Eccles Stadium in 2017 and 2019 to the Legends general session in 2022."),
+    "cornerstone-young-living-2022": ("Young Living", "Media Servers", "2017 to 2022", "Media servers for Young Living, from the outdoor stage at Rice-Eccles Stadium in 2017 and 2019 to the Legends general session in 2022."),
     "mtn-dew-nba-all-star-2020": ("Mtn Dew at NBA All-Star", "Sceptron Tech", "2020", "Sceptron LED for the Mtn Dew activation in Chicago."),
     "immersive-van-gogh": ("Immersive Van Gogh", "Production Electrician and EIC", "2020 to 2023", "Lighting and video power, network, and signal for immersive venues across the US and Canada, including the mirror forest in Denver."),
     "immersive-disney-animation": ("Immersive Disney Animation", "Production Electrician and EIC", "2023", "Power, network, and signal for the projection rooms."),
