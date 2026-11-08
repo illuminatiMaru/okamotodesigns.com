@@ -439,5 +439,68 @@
     "h": 2000
    }
   ]
+ },
+ {
+  "lane": "Lighting Design and Programming",
+  "folder": "Omnis Awards 2015 (Lighting Designer)",
+  "slug": "omnis-awards-2015",
+  "items": [
+   {
+    "type": "image",
+    "src": "01.jpg",
+    "sm": "01-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   },
+   {
+    "type": "image",
+    "src": "02.jpg",
+    "sm": "02-sm.jpg",
+    "w": 1920,
+    "h": 1080
+   },
+   {
+    "type": "image",
+    "src": "03.jpg",
+    "sm": "03-sm.jpg",
+    "w": 1920,
+    "h": 1080
+   },
+   {
+    "type": "image",
+    "src": "04.jpg",
+    "sm": "04-sm.jpg",
+    "w": 2000,
+    "h": 1125
+   },
+   {
+    "type": "video",
+    "src": "05.mp4",
+    "poster": "05-poster.jpg",
+    "w": 1280,
+    "h": 676
+   },
+   {
+    "type": "image",
+    "src": "06.jpg",
+    "sm": "06-sm.jpg",
+    "w": 1125,
+    "h": 2000
+   },
+   {
+    "type": "image",
+    "src": "07.jpg",
+    "sm": "07-sm.jpg",
+    "w": 1125,
+    "h": 2000
+   },
+   {
+    "type": "video",
+    "src": "08.mp4",
+    "poster": "08-poster.jpg",
+    "w": 1280,
+    "h": 676
+   }
+  ]
  }
 ]

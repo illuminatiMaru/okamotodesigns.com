@@ -18,6 +18,7 @@ SHOWS = {
     "awhonn-2026": ("AWHONN 2026 Convention", "LD and Programmer", "2026", "General session lighting for the AWHONN national convention."),
     "sibos-miami-2026": ("Sibos Miami", "LD and Programmer", "2026", "Session lighting for Sibos in Miami."),
     "fnce-2025": ("FNCE 2025", "LD and Programmer", "2025", "General session lighting, from the keynote stage to the full room and ceiling."),
+    "omnis-awards-2015": ("Omnis Sales Excellence Awards", "Lighting Designer", "2015", "Awards dinner and dance party in the Magnolia Ballroom at Omni Amelia Island, from the design renders to the room."),
     "nea-2014": ("National Education Association", "LD and Programmer", "2014", "Convention general session."),
     "ucf-go-for-launch-2026": ("UCF Go For Launch", "Sceptron Tech", "2026", "LED tube tunnels in the arena hallways and the ballroom LED wall."),
     "organogenesis-live-2025": ("Organogenesis LIVE", "Sceptron Tech", "2025", "Sceptron LED across the general session sets, including the Sky Full of Stars and JCB sessions."),
@@ -29,7 +30,7 @@ SHOWS = {
     "arena-show-oct-2024": ("Arena Show", "Master Electrician", "2024", "Arena stage with LED screens and beam rig."),
     "circular-truss-rig-2024": ("Circular Truss Rig", "Ground Control Tech", "2024", "Circular truss and LED ring rig, from build to rehearsal."),
 }
-ORDER = ["awhonn-2026", "sibos-miami-2026", "fnce-2025", "nea-2014",
+ORDER = ["awhonn-2026", "sibos-miami-2026", "fnce-2025", "omnis-awards-2015", "nea-2014",
          "ucf-go-for-launch-2026", "organogenesis-live-2025", "cornerstone-young-living-2022", "mtn-dew-nba-all-star-2020",
          "immersive-van-gogh", "immersive-disney-animation", "circular-truss-rig-2024", "arena-show-oct-2024", "stadium-show-nov-2023"]
 

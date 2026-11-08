@@ -120,3 +120,4 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 @media (prefers-reduced-motion: reduce) { .hero video { display: none; } .tile img, .tile video { transition: none; } }
 .hero h1 em { font-style: normal; color: #7ff0e4; text-shadow: 0 0 22px rgba(46,196,182,.9), 0 0 6px rgba(127,240,228,.8); }
 .brand span { text-shadow: 0 0 12px rgba(46,196,182,.6); }
+.gallery > img, .gallery > video { aspect-ratio: 4 / 3; height: auto; }
