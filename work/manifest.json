@@ -190,6 +190,69 @@
  },
  {
   "lane": "Media and Sceptron",
+  "folder": "HPE Partner Summit 2019 (Sceptron Tech)",
+  "slug": "hpe-partner-summit-2019",
+  "items": [
+   {
+    "type": "image",
+    "src": "01.jpg",
+    "sm": "01-sm.jpg",
+    "w": 2000,
+    "h": 953
+   },
+   {
+    "type": "video",
+    "src": "02.mp4",
+    "poster": "02-poster.jpg",
+    "w": 1280,
+    "h": 720
+   },
+   {
+    "type": "image",
+    "src": "03.jpg",
+    "sm": "03-sm.jpg",
+    "w": 2000,
+    "h": 940
+   },
+   {
+    "type": "video",
+    "src": "05.mp4",
+    "poster": "05-poster.jpg",
+    "w": 1280,
+    "h": 720
+   },
+   {
+    "type": "image",
+    "src": "06.jpg",
+    "sm": "06-sm.jpg",
+    "w": 2000,
+    "h": 953
+   },
+   {
+    "type": "image",
+    "src": "07.jpg",
+    "sm": "07-sm.jpg",
+    "w": 2000,
+    "h": 953
+   },
+   {
+    "type": "image",
+    "src": "08.jpg",
+    "sm": "08-sm.jpg",
+    "w": 2000,
+    "h": 953
+   },
+   {
+    "type": "image",
+    "src": "09.jpg",
+    "sm": "09-sm.jpg",
+    "w": 2000,
+    "h": 953
+   }
+  ]
+ },
+ {
+  "lane": "Media and Sceptron",
   "folder": "Organogenesis LIVE 2025 (Sceptron Tech)",
   "slug": "organogenesis-live-2025",
   "items": [

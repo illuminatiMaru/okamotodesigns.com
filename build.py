@@ -24,13 +24,17 @@ SHOWS = {
     "organogenesis-live-2025": ("Organogenesis LIVE", "Sceptron Tech", "2025", "Sceptron LED across the general session sets, including the Sky Full of Stars and JCB sessions."),
     "cornerstone-young-living-2022": ("Young Living", "Media Servers", "2017 to 2022", "Media servers for Young Living, from the outdoor stage at Rice-Eccles Stadium in 2017 and 2019 to the Legends general session in 2022."),
     "mtn-dew-nba-all-star-2020": ("Mtn Dew at NBA All-Star", "Sceptron Tech", "2020", "Sceptron LED for the Mtn Dew activation in Chicago."),
+    "hpe-partner-summit-2019": ("HPE Partner Summit", "Sceptron Tech", "2019", "150+ Sceptron LED fixtures for the overhead squares and the lines on the walls, at The Venetian, Las Vegas."),
     "immersive-van-gogh": ("Immersive Van Gogh", "Production Electrician and EIC", "2020 to 2023", "Lighting and video power, network, and signal for immersive venues across the US and Canada, including the mirror forest in Denver."),
     "immersive-disney-animation": ("Immersive Disney Animation", "Production Electrician and EIC", "2023", "Power, network, and signal for the projection rooms."),
     "stadium-shows": ("Stadium Shows", "Master Electrician", "2023 to 2024", "Stadium and arena stages with LED towers, screens, and beam rigs."),
 }
 ORDER = ["awhonn-2026", "sibos-miami-2026", "fnce-2025", "omnis-awards-2015", "nea-2014",
          "ucf-go-for-launch-2026", "organogenesis-live-2025", "cornerstone-young-living-2022", "mtn-dew-nba-all-star-2020",
-         "immersive-van-gogh", "immersive-disney-animation", "stadium-shows"]
+         "hpe-partner-summit-2019", "immersive-van-gogh", "immersive-disney-animation"]
+# Hidden for now (Shadow, 2026-11-09: it sat alone in the last row). Copy and media stay;
+# add it back to the end of ORDER and rebuild to show it again.
+HIDDEN = ["stadium-shows"]
 
 CLIENTS = ["National Education Association", "Lighthouse Immersive", "PRG", "4Wall", "LMG", "Christie Lites", "Cornerstone",
            "NFL Kickoff", "NFL Super Bowl", "MLB All-Star Game", "General Electric", "Bentley Motors", "SpaceX",
