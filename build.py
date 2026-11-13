@@ -150,7 +150,7 @@ def build():
 <h2>Tools I build</h2>
 <p class="sub">Small apps for the job, made by a working LD.</p>
 <div class="apps">
-<a class="app" href="beamcalc/"><img src="beamcalc/img/icon.png" alt=""><div><h3>Photon BeamCalc</h3><p>Throw distance, beam size, lens angle, and raked floor pools. Android, iPhone coming.</p></div></a>
+<a class="app" href="beamcalc/"><img src="beamcalc/img/icon.png" alt=""><div><h3>Photon BeamCalc</h3><p>Throw distance, beam size, lens angle, and raked floor pools. Now on Google Play for Android, in open testing. iPhone version coming.</p></div></a>
 <a class="app" href="fixtures/"><img src="fixtures/img/icon.png" alt=""><div><h3>Photon Fixtures</h3><p>Fixture modes, DMX charts, chain math, and patch sheets on your phone, from GDTF Share and the Open Fixture Library. In private testing.</p></div></a>
 </div>
 </div></section>
@@ -252,7 +252,7 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
 </ul>
 <div class="shots"><img src="img/1-throw-feet.jpg" alt="Throw distance screen"><img src="img/2-pool-feet.jpg" alt="Raked floor pool screen"></div>
 <p>Results assume a round beam on a level floor. Check them before you rely on them on a show. Photon BeamCalc calculates lighting beams, not structural beams, and it isn't for rigging or load calculations.</p>
-<p>Android on Google Play soon. iPhone in development. <a href="privacy/">Privacy policy</a>.</p>
+<p><strong><a href="https://play.google.com/store/apps/details?id=com.okamotodesigns.photonbeamcalc">Get it on Google Play</a></strong> for Android. It's in open testing, so anyone can install it. iPhone version in development. <a href="privacy/">Privacy policy</a>.</p>
 </div>
 """
     open(os.path.join(ROOT, "beamcalc", "index.html"), "w", encoding="utf-8").write(
