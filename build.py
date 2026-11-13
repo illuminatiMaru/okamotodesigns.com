@@ -151,7 +151,7 @@ def build():
 <p class="sub">Small apps for the job, made by a working LD.</p>
 <div class="apps">
 <a class="app" href="beamcalc/"><img src="beamcalc/img/icon.png" alt=""><div><h3>Photon BeamCalc</h3><p>Throw distance, beam size, lens angle, and raked floor pools. Android, iPhone coming.</p></div></a>
-<a class="app" href="fixtures/"><img src="fixtures/img/icon.png" alt=""><div><h3>Photon Fixtures</h3><p>Fixture modes, DMX charts, chain math, and patch sheets on your phone. In private testing.</p></div></a>
+<a class="app" href="fixtures/"><img src="fixtures/img/icon.png" alt=""><div><h3>Photon Fixtures</h3><p>Fixture modes, DMX charts, chain math, and patch sheets on your phone, from GDTF Share and the Open Fixture Library. In private testing.</p></div></a>
 </div>
 </div></section>
 
@@ -208,7 +208,7 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
         open(os.path.join(ROOT, "work", slug, "index.html"), "w", encoding="utf-8").write(
             page(f"{title} | {role} | okamotodesigns", f"{title}, {year}. {role}. {blurb}", body, 2, path=f"work/{slug}/"))
 
-    # Photon Fixtures page. Open Fixture Library only: nothing about GDTF until GDTF answers the licensing email (sent 2026-11-06).
+    # Photon Fixtures page. GDTF cleared commercial use, app stores, and offline saves by email 2026-11-12 (Daniel, info@gdtf-share.com).
     fx = f"""
 <div class="wrap prose">
 <p><a href="../">&larr; okamotodesigns</a></p>
@@ -216,19 +216,20 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
 <p>The answers you go hunting for in a PDF manual at load-in, on your phone: what a fixture's modes are, what every channel does, how many fit in a universe, and where each one lands in the patch.</p>
 <h2>What it does</h2>
 <ul>
-<li>Search hundreds of fixtures and pick a mode to see every DMX channel, its default, and its value ranges.</li>
+<li>Search the built-in library offline, or sign in with your own free GDTF Share account to reach more than 10,000 fixture types, with manufacturer uploads marked. Pick a mode to see every DMX channel, its default, and its value ranges.</li>
 <li>Chain math: how many fit in a universe with no fixture split, and the total channels for any count.</li>
 <li>Build a patch: add fixtures by quantity and position, start new universes, and get each unit's address and fixture number.</li>
-<li>Export a clean patch sheet as a PDF or spreadsheet to print or send to the crew.</li>
-<li>Works offline. No ads, no accounts needed for the built-in library.</li>
+<li>Export a clean patch sheet as a PDF for the crew, plus a CSV with one row per fixture (number, universe, address, mode, position, notes) that you can import into Lightwright.</li>
+<li>Works offline. Save GDTF fixtures to your phone before you head into a venue with no signal. No ads, and the built-in library needs no account.</li>
 </ul>
 <div class="shots"><img src="img/fixture.jpg" alt="Fixture screen with mode, chain math, and channel list"><img src="img/patch.jpg" alt="Patch screen with fixture counts and addresses"></div>
 <h2>Patch sheet export</h2>
 <p><img src="img/patch-pdf.png" alt="Exported patch sheet, Universe 1" style="border-radius:8px;background:#fff"></p>
-<p>Fixture definitions are community-written. Check them against the manufacturer's chart before you trust them on a show.</p>
+<p>Open library definitions are community-written, and GDTF files are labeled as a manufacturer or user upload. Check any of them against the manufacturer's chart before you trust it on a show.</p>
 <h2>Want to test it?</h2>
 <p>Photon Fixtures is in private testing on Android. If you program or patch rigs and want to try it, <a href="mailto:{EMAIL}?subject=Photon%20Fixtures%20testing">send me a note</a>.</p>
 <h2>Credits</h2>
+<p class="date"><img src="img/gdtf.svg" alt="GDTF logo" style="height:28px;width:28px;vertical-align:middle;margin-right:8px">Powered by GDTF. GDTF fixture files come from <a href="https://gdtf-share.com/">GDTF Share</a>, downloaded by each user with their own account.</p>
 <p class="date">Built-in fixture library from the <a href="https://open-fixture-library.org/">Open Fixture Library</a>, used under the MIT License.</p>
 </div>
 """
