@@ -231,11 +231,52 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
 <h2>Credits</h2>
 <p class="date"><img src="img/gdtf.svg" alt="GDTF logo" style="height:28px;width:28px;vertical-align:middle;margin-right:8px">Powered by GDTF. GDTF fixture files come from <a href="https://gdtf-share.com/">GDTF Share</a>, downloaded by each user with their own account.</p>
 <p class="date">Built-in fixture library from the <a href="https://open-fixture-library.org/">Open Fixture Library</a>, used under the MIT License.</p>
+<p class="date"><a href="privacy/">Privacy policy</a></p>
 </div>
 """
     os.makedirs(os.path.join(ROOT, "fixtures"), exist_ok=True)
     open(os.path.join(ROOT, "fixtures", "index.html"), "w", encoding="utf-8").write(
         page("Photon Fixtures | okamotodesigns", "Fixture modes, DMX charts, chain math, and patch sheets on your phone.", fx, 1, path="fixtures/"))
+
+    # Photon Fixtures privacy policy (drafted 2026-11-14 for the Play listing). Facts checked against the app code:
+    # GDTF Share at gdtf-share.com (password AES-GCM in Android Keystore / iPhone Keychain), OFL sync from GitHub,
+    # Play Billing unlock, no analytics or ads.
+    fpp = f"""
+<div class="wrap prose">
+<p><a href="../">&larr; Photon Fixtures</a></p>
+<h1>Photon Fixtures Privacy Policy</h1>
+<p class="date">Effective November 14, 2026</p>
+<p>Photon Fixtures is a lighting fixture library and patch app from okamotodesigns, for Android and iPhone.</p>
+<h2>The short version</h2>
+<p>okamotodesigns doesn't collect your data. The app has no ads, no analytics, and no okamotodesigns account. What you build in it stays on your device.</p>
+<h2>What stays on your device</h2>
+<ul>
+<li>Your shows, patches, custom fixtures, favorites, and settings.</li>
+<li>Fixture files and the fixture list you download from GDTF Share.</li>
+<li>Whether you've bought the unlock, so it keeps working with no signal.</li>
+</ul>
+<p>Uninstalling the app removes all of it.</p>
+<h2>GDTF Share sign-in (optional)</h2>
+<p>If you sign in to GDTF Share, the app sends your username and password only to gdtf-share.com, over an encrypted connection, to get the fixture list and fixture files. Your password is stored encrypted on your device (the Android Keystore, or the iPhone Keychain) so the app can sign in again for you. It is never sent to okamotodesigns. Signing out deletes the saved password and the downloaded GDTF files. GDTF Share handles your account under its own privacy policy.</p>
+<h2>Library sync (optional)</h2>
+<p>The Sync button on the About screen downloads Open Fixture Library updates from GitHub. The request carries nothing about you beyond what any web request does, such as your IP address, which GitHub handles under its own privacy policy.</p>
+<h2>Exports</h2>
+<p>Export creates a PDF and a CSV on your device. They only leave it when you choose where to send them.</p>
+<h2>Purchases</h2>
+<p>The optional unlock is sold through Google Play or the Apple App Store, which handle payment. okamotodesigns never sees your card details. The app only learns whether you own the unlock. okamotodesigns may see the order records the stores provide to developers.</p>
+<h2>What the app stores may collect</h2>
+<p>Google Play and the Apple App Store handle downloads and may collect information under their own privacy policies. okamotodesigns may see the summary sales, install, and crash reports those stores provide to developers.</p>
+<h2>Children</h2>
+<p>The app isn't directed at children, and okamotodesigns collects no information from anyone, including children.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be posted here with a new effective date.</p>
+<h2>Contact</h2>
+<p>okamotodesigns: <a href="mailto:{EMAIL}">{EMAIL}</a></p>
+</div>
+"""
+    os.makedirs(os.path.join(ROOT, "fixtures", "privacy"), exist_ok=True)
+    open(os.path.join(ROOT, "fixtures", "privacy", "index.html"), "w", encoding="utf-8").write(
+        page("Photon Fixtures Privacy Policy | okamotodesigns", "Privacy policy for the Photon Fixtures app.", fpp, 2, path="fixtures/privacy/"))
 
     # BeamCalc landing page.
     bc = """
