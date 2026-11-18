@@ -150,7 +150,7 @@ def build():
 <h2>Tools I build</h2>
 <p class="sub">Small apps for the job, made by a working LD.</p>
 <div class="apps">
-<a class="app" href="beamcalc/"><img src="beamcalc/img/icon.png" alt=""><div><h3>Photon BeamCalc</h3><p>Throw distance, beam size, lens angle, and raked floor pools. Now on Google Play for Android, in open testing. iPhone version coming.</p></div></a>
+<a class="app" href="beamcalc/"><img src="beamcalc/img/icon.png" alt=""><div><h3>Photon BeamCalc</h3><p>Throw distance, beam size, lens angle, and raked floor pools. Now on the App Store for iPhone, and on Google Play for Android (open testing).</p></div></a>
 <a class="app" href="fixtures/"><img src="fixtures/img/icon.png" alt=""><div><h3>Photon Fixtures</h3><p>Fixture modes, DMX charts, chain math, and patch sheets on your phone, from GDTF Share and the Open Fixture Library. In private testing.</p></div></a>
 </div>
 </div></section>
@@ -255,7 +255,14 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
 <li>Fixture files and the fixture list you download from GDTF Share.</li>
 <li>Whether you've bought the unlock, so it keeps working with no signal.</li>
 </ul>
-<p>Uninstalling the app removes all of it.</p>
+<h2 id="delete">Deleting your data</h2>
+<p>Everything the app keeps is on your device, so you can delete it yourself at any time:</p>
+<ul>
+<li><strong>Everything:</strong> uninstall the app, or clear its storage (Android: Settings &gt; Apps &gt; Photon Fixtures &gt; Storage &gt; Clear storage). This removes your shows, patches, custom fixtures, favorites, settings, downloaded fixture files, and the saved GDTF Share sign-in.</li>
+<li><strong>GDTF Share sign-in only:</strong> sign out on the About screen. This deletes the saved password and the downloaded GDTF files.</li>
+<li><strong>A single show:</strong> delete it from the show menu on the Patch screen.</li>
+</ul>
+<p>okamotodesigns holds no copy of any of it, so there is nothing to request from us. Your GDTF Share account itself is managed at gdtf-share.com, and purchase records are kept by Google Play or the Apple App Store. Questions: <a href="mailto:shadow@okamotodesigns.com">shadow@okamotodesigns.com</a>.</p>
 <h2>GDTF Share sign-in (optional)</h2>
 <p>If you sign in to GDTF Share, the app sends your username and password only to gdtf-share.com, over an encrypted connection, to get the fixture list and fixture files. Your password is stored encrypted on your device (the Android Keystore, or the iPhone Keychain) so the app can sign in again for you. It is never sent to okamotodesigns. Signing out deletes the saved password and the downloaded GDTF files. GDTF Share handles your account under its own privacy policy.</p>
 <h2>Library sync (optional)</h2>
@@ -293,7 +300,7 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
 </ul>
 <div class="shots"><img src="img/1-throw-feet.jpg" alt="Throw distance screen"><img src="img/2-pool-feet.jpg" alt="Raked floor pool screen"></div>
 <p>Results assume a round beam on a level floor. Check them before you rely on them on a show. Photon BeamCalc calculates lighting beams, not structural beams, and it isn't for rigging or load calculations.</p>
-<p><strong><a href="https://play.google.com/store/apps/details?id=com.okamotodesigns.photonbeamcalc">Get it on Google Play</a></strong> for Android. It's in open testing, so anyone can install it. iPhone version in development. <a href="privacy/">Privacy policy</a>.</p>
+<p><strong><a href="https://apps.apple.com/us/app/photon-beamcalc/id6835239986">Download on the App Store</a></strong> for iPhone. <strong><a href="https://play.google.com/store/apps/details?id=com.okamotodesigns.photonbeamcalc">Get it on Google Play</a></strong> for Android, in open testing, so anyone can install it. <a href="privacy/">Privacy policy</a>.</p>
 </div>
 """
     open(os.path.join(ROOT, "beamcalc", "index.html"), "w", encoding="utf-8").write(
