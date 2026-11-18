@@ -151,7 +151,7 @@ def build():
 <p class="sub">Small apps for the job, made by a working LD.</p>
 <div class="apps">
 <a class="app" href="beamcalc/"><img src="beamcalc/img/icon.png" alt=""><div><h3>Photon BeamCalc</h3><p>Throw distance, beam size, lens angle, and raked floor pools. Now on the App Store for iPhone, and on Google Play for Android (open testing).</p></div></a>
-<a class="app" href="fixtures/"><img src="fixtures/img/icon.png" alt=""><div><h3>Photon Fixtures</h3><p>Fixture modes, DMX charts, chain math, and patch sheets on your phone, from GDTF Share and the Open Fixture Library. On Google Play for Android (open testing). iPhone version in review.</p></div></a>
+<a class="app" href="fixtures/"><img src="fixtures/img/icon.png" alt=""><div><h3>Photon Fixtures</h3><p>Fixture modes, DMX charts, chain math, and patch sheets on your phone, from GDTF Share and the Open Fixture Library. Now on the App Store for iPhone, and on Google Play for Android (open testing).</p></div></a>
 </div>
 </div></section>
 
@@ -212,7 +212,8 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
     fx = f"""
 <div class="wrap prose">
 <p><a href="../">&larr; okamotodesigns</a></p>
-<div class="app" style="border:0;padding:0;background:none"><img src="img/icon.png" alt=""><div><h1>Photon Fixtures</h1><p class="date">A fixture and patch app from okamotodesigns, in private testing</p></div></div>
+<div class="app" style="border:0;padding:0;background:none"><img src="img/icon.png" alt=""><div><h1>Photon Fixtures</h1><p class="date">A fixture and patch app from okamotodesigns</p></div></div>
+<p><strong><a href="https://apps.apple.com/us/app/photon-fixtures/id6835563139">Download on the App Store</a></strong> for iPhone. <strong><a href="https://play.google.com/store/apps/details?id=com.okamotodesigns.photonfixtures">Get it on Google Play</a></strong> for Android, in open testing. Free to download, with a one-time unlock for Patched, Favorites, and Shows.</p>
 <p>The answers you go hunting for in a PDF manual at load-in, on your phone: what a fixture's modes are, what every channel does, how many fit in a universe, and where each one lands in the patch.</p>
 <h2>What it does</h2>
 <ul>
@@ -226,8 +227,8 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
 <h2>Patch sheet export</h2>
 <p><img src="img/patch-pdf.png" alt="Exported patch sheet, Universe 1" style="border-radius:8px;background:#fff"></p>
 <p>Open library definitions are community-written, and GDTF files are labeled as a manufacturer or user upload. Check any of them against the manufacturer's chart before you trust it on a show.</p>
-<h2>Want to test it?</h2>
-<p>Photon Fixtures is in private testing on Android. If you program or patch rigs and want to try it, <a href="mailto:{EMAIL}?subject=Photon%20Fixtures%20testing">send me a note</a>.</p>
+<h2>Feedback</h2>
+<p>If you program or patch rigs and something is wrong or missing, <a href="mailto:{EMAIL}?subject=Photon%20Fixtures%20feedback">send me a note</a>.</p>
 <h2>Credits</h2>
 <p class="date"><img src="img/gdtf.svg" alt="GDTF logo" style="height:28px;width:28px;vertical-align:middle;margin-right:8px">Powered by GDTF. GDTF fixture files come from <a href="https://gdtf-share.com/">GDTF Share</a>, downloaded by each user with their own account.</p>
 <p class="date">Built-in fixture library from the <a href="https://open-fixture-library.org/">Open Fixture Library</a>, used under the MIT License.</p>
