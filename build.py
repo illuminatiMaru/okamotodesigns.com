@@ -357,7 +357,7 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
 <h2>Android</h2>
 <ol>
 <li>Tap {step_link(HANAFUDA_GROUP, "Join the tester group")}, then Join group. Use the same Google account as your Play Store.</li>
-<li>Then tap {step_link(HANAFUDA_PLAY_TEST, "Get it on Google Play")}, tap Become a tester, then Download it on Google Play.</li>
+<li>Then tap {step_link(HANAFUDA_PLAY_TEST, "Get it on Google Play")}, tap Become a tester, then Download it on Google Play. Google Play may call it com.okamotodesigns.hanafuda for now. That's the right one.</li>
 </ol>
 <p>Something broken or confusing? <a href="mailto:{EMAIL}?subject=Hanafuda%20Sensei%20feedback">Tell me</a>.</p>
 <p class="date">Card art: the traditional-color hanafuda designs by Louie Mantia and すけじょ, card back by Spenĉjo, from <a href="https://commons.wikimedia.org/wiki/Category:SVG_Hanafuda_with_traditional_colors_(black_border)">Wikimedia Commons</a>, under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
