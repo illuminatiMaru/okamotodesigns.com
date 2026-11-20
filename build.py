@@ -336,7 +336,7 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
     # until then its button reads "coming soon".
     HANAFUDA_TESTFLIGHT = None  # TestFlight public link
     HANAFUDA_GROUP = "https://groups.google.com/g/hanafuda-sensei-testers"
-    HANAFUDA_PLAY_TEST = None  # Play internal testing opt-in link
+    HANAFUDA_PLAY_TEST = "https://play.google.com/apps/internaltest/4701283390841648912"  # Play internal testing opt-in link
 
     def step_link(url, label):
         if url:
