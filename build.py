@@ -331,6 +331,71 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
     open(os.path.join(ROOT, "beamcalc", "privacy", "index.html"), "w", encoding="utf-8").write(
         page("Photon BeamCalc Privacy Policy | okamotodesigns", "Privacy policy for the Photon BeamCalc app.", pp, 2, path="beamcalc/privacy/"))
 
+    # Hanafuda Sensei beta landing page (2026-11-20). Unlisted: not linked from the home page.
+    # The printed QR cards point here, so the URL must never move. Fill a link in when it exists;
+    # until then its button reads "coming soon".
+    HANAFUDA_TESTFLIGHT = None  # TestFlight public link
+    HANAFUDA_GROUP = "https://groups.google.com/g/hanafuda-sensei-testers"
+    HANAFUDA_PLAY_TEST = None  # Play internal testing opt-in link
+
+    def step_link(url, label):
+        if url:
+            return f'<a class="btn" href="{url}">{label}</a>'
+        return f'<span class="btn" style="opacity:.55">{label} (link coming soon)</span>'
+
+    hf = f"""
+<div class="wrap prose">
+<div class="app" style="border:0;padding:0;background:none"><img src="img/icon.png" alt=""><div><h1>Hanafuda Sensei</h1><p class="date">Learn and play Koi-Koi, from okamotodesigns</p></div></div>
+<p><em>For my dad, Kazuto, and my uncle, Matsuo, who patiently taught me to play when I was a child.</em></p>
+<p>This is an early test version. It's free, with no ads and no account. Pick your phone:</p>
+<h2>iPhone</h2>
+<ol>
+<li>Get the free <a href="https://apps.apple.com/us/app/testflight/id899247664">TestFlight</a> app from the App Store.</li>
+<li>Come back here and tap: {step_link(HANAFUDA_TESTFLIGHT, "Join on iPhone")}</li>
+<li>TestFlight opens. Tap Accept, then Install.</li>
+</ol>
+<h2>Android</h2>
+<ol>
+<li>Tap {step_link(HANAFUDA_GROUP, "Join the tester group")}, then Join group. Use the same Google account as your Play Store.</li>
+<li>Then tap {step_link(HANAFUDA_PLAY_TEST, "Get it on Google Play")}, tap Become a tester, then Download it on Google Play.</li>
+</ol>
+<p>Something broken or confusing? <a href="mailto:{EMAIL}?subject=Hanafuda%20Sensei%20feedback">Tell me</a>.</p>
+<p class="date">Card art: the traditional-color hanafuda designs by Louie Mantia and すけじょ, card back by Spenĉjo, from <a href="https://commons.wikimedia.org/wiki/Category:SVG_Hanafuda_with_traditional_colors_(black_border)">Wikimedia Commons</a>, under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
+<p class="date"><a href="privacy/">Privacy policy</a></p>
+</div>
+"""
+    os.makedirs(os.path.join(ROOT, "hanafuda"), exist_ok=True)
+    open(os.path.join(ROOT, "hanafuda", "index.html"), "w", encoding="utf-8").write(
+        page("Hanafuda Sensei | okamotodesigns", "Learn and play Koi-Koi. Join the test on iPhone or Android.", hf, 1, path="hanafuda/"))
+
+    # Hanafuda Sensei privacy policy (2026-11-20). Facts checked against the app code: no network
+    # code at all; it saves the running match (seed and moves) and a "welcome seen" flag on the device.
+    hpp = f"""
+<div class="wrap prose">
+<p><a href="../">&larr; Hanafuda Sensei</a></p>
+<h1>Hanafuda Sensei Privacy Policy</h1>
+<p class="date">Effective November 20, 2026</p>
+<p>Hanafuda Sensei is a hanafuda (Koi-Koi) game from okamotodesigns, for Android and iPhone.</p>
+<h2>What the app collects</h2>
+<p>Nothing. The app has no accounts, ads, analytics, or tracking, and it doesn't use the internet. Nothing about you or your games is sent to okamotodesigns or anyone else.</p>
+<h2>What stays on your device</h2>
+<p>The match in progress, so you can pick up where you left off, and whether you've seen the welcome screen. Uninstalling the app, or clearing its storage, removes both.</p>
+<h2>Links</h2>
+<p>The About screen links to the card art's source and license. Tapping one opens your browser, which handles that visit under its own privacy policy.</p>
+<h2>What the app stores may collect</h2>
+<p>Google Play, the Apple App Store, and TestFlight handle downloads and may collect information under their own privacy policies. okamotodesigns may see the summary install, crash, and tester reports those stores provide to developers.</p>
+<h2>Children</h2>
+<p>okamotodesigns collects no information from anyone, including children.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be posted here with a new effective date.</p>
+<h2>Contact</h2>
+<p>okamotodesigns: <a href="mailto:{EMAIL}">{EMAIL}</a></p>
+</div>
+"""
+    os.makedirs(os.path.join(ROOT, "hanafuda", "privacy"), exist_ok=True)
+    open(os.path.join(ROOT, "hanafuda", "privacy", "index.html"), "w", encoding="utf-8").write(
+        page("Hanafuda Sensei Privacy Policy | okamotodesigns", "Privacy policy for the Hanafuda Sensei app.", hpp, 2, path="hanafuda/privacy/"))
+
     nf = '<div class="wrap prose"><h1>Nothing focused here</h1><p>That page isn\'t in the plot. <a href="/">Back to okamotodesigns</a>.</p></div>'
     open(os.path.join(ROOT, "404.html"), "w", encoding="utf-8").write(page("Not found | okamotodesigns", "Page not found.", nf, 0, path="404.html").replace('href="assets/', 'href="/assets/').replace('href=""', 'href="/"'))
     open(os.path.join(ROOT, "CNAME"), "w").write("okamotodesigns.com\n")
