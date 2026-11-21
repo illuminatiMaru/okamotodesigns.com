@@ -147,11 +147,12 @@ def build():
 </div></section>
 
 <section id="tools" class="alt"><div class="wrap">
-<h2>Tools I build</h2>
-<p class="sub">Small apps for the job, made by a working LD.</p>
+<h2>Apps I build</h2>
+<p class="sub">Small apps for the job, made by a working LD, and one for the family table.</p>
 <div class="apps">
 <a class="app" href="beamcalc/"><img src="beamcalc/img/icon.png" alt=""><div><h3>Photon BeamCalc</h3><p>Throw distance, beam size, lens angle, and raked floor pools. Now on the App Store for iPhone, and on Google Play for Android (open testing).</p></div></a>
 <a class="app" href="fixtures/"><img src="fixtures/img/icon.png" alt=""><div><h3>Photon Fixtures</h3><p>Fixture modes, DMX charts, chain math, and patch sheets on your phone, from GDTF Share and the Open Fixture Library. Now on the App Store for iPhone, and on Google Play for Android (open testing).</p></div></a>
+<a class="app" href="hanafuda/"><img src="hanafuda/img/icon.png" alt=""><div><h3>Hanafuda Sensei</h3><p>Learn and play Koi-Koi, the classic Japanese flower card game. Free, no ads. Now in testing on iPhone and Android.</p></div></a>
 </div>
 </div></section>
 
@@ -331,7 +332,7 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
     open(os.path.join(ROOT, "beamcalc", "privacy", "index.html"), "w", encoding="utf-8").write(
         page("Photon BeamCalc Privacy Policy | okamotodesigns", "Privacy policy for the Photon BeamCalc app.", pp, 2, path="beamcalc/privacy/"))
 
-    # Hanafuda Sensei beta landing page (2026-11-20). Unlisted: not linked from the home page.
+    # Hanafuda Sensei landing page (2026-11-20). Linked from the home page's Apps section since 2026-11-20 (Shadow).
     # The printed QR cards point here, so the URL must never move. Fill a link in when it exists;
     # until then its button reads "coming soon".
     HANAFUDA_TESTFLIGHT = "https://testflight.apple.com/join/rVdumQnX"  # TestFlight public link (Family group, 50 max)
