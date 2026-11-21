@@ -361,7 +361,7 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
 <li>Then tap {step_link(HANAFUDA_PLAY_TEST, "Get it on Google Play")}, tap Become a tester, then Download it on Google Play. Google Play may call it com.okamotodesigns.hanafuda for now. That's the right one.</li>
 </ol>
 <p>Something broken or confusing? <a href="mailto:{EMAIL}?subject=Hanafuda%20Sensei%20feedback">Tell me</a>.</p>
-<p class="date">Card art: the traditional-color hanafuda designs by Louie Mantia and すけじょ, card back by Spenĉjo, from <a href="https://commons.wikimedia.org/wiki/Category:SVG_Hanafuda_with_traditional_colors_(black_border)">Wikimedia Commons</a>, under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
+<p class="date">Card art: the traditional-color hanafuda designs by Louie Mantia and すけじょ, card back by Spenĉjo, from <a href="https://commons.wikimedia.org/wiki/Category:SVG_Hanafuda_with_traditional_colors_(black_border)">Wikimedia Commons</a>, under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. <a href="cards/">Download the card files</a>.</p>
 <p class="date"><a href="privacy/">Privacy policy</a></p>
 </div>
 """
@@ -396,6 +396,57 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
     os.makedirs(os.path.join(ROOT, "hanafuda", "privacy"), exist_ok=True)
     open(os.path.join(ROOT, "hanafuda", "privacy", "index.html"), "w", encoding="utf-8").write(
         page("Hanafuda Sensei Privacy Policy | okamotodesigns", "Privacy policy for the Hanafuda Sensei app.", hpp, 2, path="hanafuda/privacy/"))
+
+    # Hanafuda Sensei card files (2026-11-21, Shadow's go). The classic deck is the Wikimedia Commons
+    # "traditional colors (black border)" set, CC BY-SA 4.0. Our versions (the PNGs the app ships, in
+    # hanafuda/cards/png/, copied from the app's composeResources) are published here under the same
+    # license so the app-store copy is never the only one (the CC 4.0 no-DRM clause). The zip is
+    # rebuilt from those PNGs on every build. Update the PNGs whenever the app's card art changes.
+    import zipfile
+    CARD_NAMES = ["Crane", "Pine poetry ribbon", "Pine", "Pine", "Bush warbler", "Plum poetry ribbon", "Plum", "Plum",
+                  "Cherry blossom curtain", "Cherry poetry ribbon", "Cherry", "Cherry", "Cuckoo", "Wisteria red ribbon", "Wisteria", "Wisteria",
+                  "Eight-plank bridge", "Iris red ribbon", "Iris", "Iris", "Butterflies", "Peony blue ribbon", "Peony", "Peony",
+                  "Boar", "Bush clover red ribbon", "Bush clover", "Bush clover", "Full moon", "Geese", "Pampas grass", "Pampas grass",
+                  "Sake cup", "Chrysanthemum blue ribbon", "Chrysanthemum", "Chrysanthemum", "Deer", "Maple blue ribbon", "Maple", "Maple",
+                  "Rain man", "Swallow", "Willow red ribbon", "Lightning", "Phoenix", "Paulownia", "Paulownia", "Paulownia"]
+    COMMONS = "https://commons.wikimedia.org/wiki/Category:SVG_Hanafuda_with_traditional_colors_(black_border)"
+    LICENSE_URL = "https://creativecommons.org/licenses/by-sa/4.0/"
+    credits = ("Hanafuda Sensei card files, from okamotodesigns (https://okamotodesigns.com/hanafuda/cards/)\n\n"
+               "Card designs by Louie Mantia and すけじょ; card back by Spenĉjo; from Wikimedia Commons:\n" + COMMONS + "\n\n"
+               "License: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)\n" + LICENSE_URL + "\n\n"
+               "Changes by okamotodesigns: rendered from the original SVG files to PNG at 358 x 587 pixels.\n"
+               "These files are licensed CC BY-SA 4.0 as well. File card_NN.png is card NN in month order\n"
+               "(January to December, four cards each); card_back.png is the back.\n")
+    cards_dir = os.path.join(ROOT, "hanafuda", "cards")
+    zpath = os.path.join(cards_dir, "hanafuda-sensei-classic-cards.zip")
+    with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
+        for n in range(48):
+            z.write(os.path.join(cards_dir, "png", f"card_{n:02d}.png"), f"card_{n:02d}.png")
+        z.write(os.path.join(cards_dir, "png", "card_back.png"), "card_back.png")
+        z.writestr("CREDITS-AND-LICENSE.txt", credits)
+    zsize = os.path.getsize(zpath) / 1e6
+    months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    tiles = "".join(
+        f'<h3 style="margin:18px 0 6px">{months[m]}</h3><div style="display:flex;flex-wrap:wrap;gap:8px">'
+        + "".join(f'<a href="png/card_{n:02d}.png"><img src="png/card_{n:02d}.png" alt="{CARD_NAMES[n]}" title="{CARD_NAMES[n]}" width="72" height="118" loading="lazy" style="border-radius:4px"></a>'
+                  for n in range(m * 4, m * 4 + 4)) + '</div>'
+        for m in range(12))
+    hc = f"""
+<div class="wrap prose">
+<p><a href="../">&larr; Hanafuda Sensei</a></p>
+<h1>Hanafuda Sensei card files</h1>
+<p>These are the classic card images used in Hanafuda Sensei: all 48 cards and the card back. They're free to use, share and adapt under the same license as the original designs.</p>
+<p><a class="btn" href="hanafuda-sensei-classic-cards.zip">Download all 49 files (zip, {zsize:.1f} MB)</a></p>
+<h2>Credits and license</h2>
+<p>Card designs by Louie Mantia and すけじょ, card back by Spenĉjo, from <a href="{COMMONS}">Wikimedia Commons</a>, licensed <a href="{LICENSE_URL}">CC BY-SA 4.0</a>.</p>
+<p>Changes by okamotodesigns: rendered from the original SVG files to PNG at 358 x 587 pixels. These versions are licensed <a href="{LICENSE_URL}">CC BY-SA 4.0</a> too. If you use them, credit the artists above and share your changes under the same license.</p>
+<h2>The cards</h2>
+{tiles}
+<p style="margin-top:14px"><a href="png/card_back.png"><img src="png/card_back.png" alt="Card back" width="72" height="118" style="border-radius:4px"></a></p>
+</div>
+"""
+    open(os.path.join(cards_dir, "index.html"), "w", encoding="utf-8").write(
+        page("Hanafuda Sensei card files | okamotodesigns", "The classic hanafuda card images used in Hanafuda Sensei, free under CC BY-SA 4.0.", hc, 2, path="hanafuda/cards/"))
 
     nf = '<div class="wrap prose"><h1>Nothing focused here</h1><p>That page isn\'t in the plot. <a href="/">Back to okamotodesigns</a>.</p></div>'
     open(os.path.join(ROOT, "404.html"), "w", encoding="utf-8").write(page("Not found | okamotodesigns", "Page not found.", nf, 0, path="404.html").replace('href="assets/', 'href="/assets/').replace('href=""', 'href="/"'))
