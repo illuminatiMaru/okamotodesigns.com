@@ -334,7 +334,7 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
     # Hanafuda Sensei beta landing page (2026-11-20). Unlisted: not linked from the home page.
     # The printed QR cards point here, so the URL must never move. Fill a link in when it exists;
     # until then its button reads "coming soon".
-    HANAFUDA_TESTFLIGHT = None  # TestFlight public link
+    HANAFUDA_TESTFLIGHT = "https://testflight.apple.com/join/rVdumQnX"  # TestFlight public link (Family group, 50 max)
     HANAFUDA_GROUP = "https://groups.google.com/g/hanafuda-sensei-testers"
     HANAFUDA_PLAY_TEST = "https://play.google.com/apps/internaltest/4701283390841648912"  # Play internal testing opt-in link
 
