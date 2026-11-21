@@ -419,11 +419,15 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
                "(January to December, four cards each); card_back.png is the back.\n")
     cards_dir = os.path.join(ROOT, "hanafuda", "cards")
     zpath = os.path.join(cards_dir, "hanafuda-sensei-classic-cards.zip")
-    with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
-        for n in range(48):
-            z.write(os.path.join(cards_dir, "png", f"card_{n:02d}.png"), f"card_{n:02d}.png")
-        z.write(os.path.join(cards_dir, "png", "card_back.png"), "card_back.png")
-        z.writestr("CREDITS-AND-LICENSE.txt", credits)
+    # Fixed timestamps, so the zip is byte-identical between builds and only changes with the cards.
+    def zadd(z, name, data):
+        info = zipfile.ZipInfo(name, date_time=(2026, 11, 21, 0, 0, 0))
+        info.compress_type = zipfile.ZIP_DEFLATED
+        z.writestr(info, data)
+    with zipfile.ZipFile(zpath, "w") as z:
+        for fname in [f"card_{n:02d}.png" for n in range(48)] + ["card_back.png"]:
+            zadd(z, fname, open(os.path.join(cards_dir, "png", fname), "rb").read())
+        zadd(z, "CREDITS-AND-LICENSE.txt", credits.encode("utf-8"))
     zsize = os.path.getsize(zpath) / 1e6
     months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     tiles = "".join(
@@ -442,7 +446,8 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
 <p>Changes by okamotodesigns: rendered from the original SVG files to PNG at 358 x 587 pixels. These versions are licensed <a href="{LICENSE_URL}">CC BY-SA 4.0</a> too. If you use them, credit the artists above and share your changes under the same license.</p>
 <h2>The cards</h2>
 {tiles}
-<p style="margin-top:14px"><a href="png/card_back.png"><img src="png/card_back.png" alt="Card back" width="72" height="118" style="border-radius:4px"></a></p>
+<h3 style="margin:18px 0 6px">Card back</h3>
+<p><a href="png/card_back.png"><img src="png/card_back.png" alt="Card back" width="72" height="118" style="border-radius:4px;border:1px solid #c9a24a"></a></p>
 </div>
 """
     open(os.path.join(cards_dir, "index.html"), "w", encoding="utf-8").write(
