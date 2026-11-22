@@ -153,7 +153,7 @@ def build():
 <div class="apps">
 <a class="app" href="beamcalc/"><img src="beamcalc/img/icon.png" alt=""><div><h3>Photon BeamCalc</h3><p>Throw distance, beam size, lens angle, and raked floor pools. Now on the App Store for iPhone, and on Google Play for Android (open testing).</p></div></a>
 <a class="app" href="fixtures/"><img src="fixtures/img/icon.png" alt=""><div><h3>Photon Fixtures</h3><p>Fixture modes, DMX charts, chain math, and patch sheets on your phone, from GDTF Share and the Open Fixture Library. Now on the App Store for iPhone, and on Google Play for Android (open testing).</p></div></a>
-<a class="app" href="hanafuda/"><img src="hanafuda/img/icon.png" alt=""><div><h3>Hanafuda Sensei</h3><p>Learn and play Koi-Koi, the classic Japanese flower card game. Free, no ads. Now in testing on iPhone and Android.</p></div></a>
+<a class="app" href="hanafuda/"><img src="hanafuda/img/icon.png" alt=""><div><h3>Hanafuda Sensei</h3><p>Learn and play Koi-Koi and Sakura, two classic games with Japanese flower cards. Free, no ads. Now in testing on iPhone and Android.</p></div></a>
 </div>
 </div></section>
 
@@ -355,7 +355,7 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
     def hanafuda_page(up, intro, tf_link):
         return f"""
 <div class="wrap prose">
-<div class="app" style="border:0;padding:0;background:none"><img src="{up}img/icon.png" alt=""><div><h1>Hanafuda Sensei</h1><p class="date">Learn and play Koi-Koi, from okamotodesigns</p></div></div>
+<div class="app" style="border:0;padding:0;background:none"><img src="{up}img/icon.png" alt=""><div><h1>Hanafuda Sensei</h1><p class="date">Learn and play Koi-Koi and Sakura, from okamotodesigns</p></div></div>
 <p><em>For my dad, Kazuto, and my uncle, Matsuo, who patiently taught me to play when I was a child.</em></p>
 {intro}
 <h2>iPhone</h2>
@@ -375,13 +375,13 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
 """
 
     hf_public = hanafuda_page("",
-        "<p><strong>Beta testers wanted.</strong> Hanafuda is the Japanese flower card game, and Koi-Koi is its classic two-player game. "
+        "<p><strong>Beta testers wanted.</strong> Hanafuda is the Japanese flower card game. Play Koi-Koi, its classic two-player game, or Sakura, the Hawaii-style game where every card you capture counts. "
         "Hanafuda Sensei teaches you as you play, with a coach and pictured rules. It's free, with no ads and no account. "
         "Try it, and tell me where it lost you. Pick your phone:</p>",
         HANAFUDA_TF_PUBLIC)
     os.makedirs(os.path.join(ROOT, "hanafuda"), exist_ok=True)
     open(os.path.join(ROOT, "hanafuda", "index.html"), "w", encoding="utf-8").write(
-        page("Hanafuda Sensei | okamotodesigns", "Learn and play Koi-Koi, the Japanese flower card game. Free, no ads. Beta testers wanted on iPhone and Android.", hf_public, 1, path="hanafuda/"))
+        page("Hanafuda Sensei | okamotodesigns", "Learn and play Koi-Koi and Sakura, games with Japanese flower cards. Free, no ads. Beta testers wanted on iPhone and Android.", hf_public, 1, path="hanafuda/"))
 
     hf_family = hanafuda_page("../",
         "<p>This is an early test version for family. It's free, with no ads and no account. Pick your phone:</p>",
@@ -391,18 +391,18 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
         page("Hanafuda Sensei | okamotodesigns", "Hanafuda Sensei family test.", hf_family, 2,
              path=f"hanafuda/{HANAFUDA_FAMILY_SLUG}/", noindex=True))
 
-    # Hanafuda Sensei privacy policy (2026-11-20). Facts checked against the app code: no network
+    # Hanafuda Sensei privacy policy (2026-11-20; 2026-11-22 adds Sakura, settings and stats). Facts checked against the app code: no network
     # code at all; it saves the running match (seed and moves) and a "welcome seen" flag on the device.
     hpp = f"""
 <div class="wrap prose">
 <p><a href="../">&larr; Hanafuda Sensei</a></p>
 <h1>Hanafuda Sensei Privacy Policy</h1>
-<p class="date">Effective November 20, 2026</p>
-<p>Hanafuda Sensei is a hanafuda (Koi-Koi) game from okamotodesigns, for Android and iPhone.</p>
+<p class="date">Effective November 22, 2026</p>
+<p>Hanafuda Sensei is a hanafuda game (Koi-Koi and Sakura) from okamotodesigns, for Android and iPhone.</p>
 <h2>What the app collects</h2>
 <p>Nothing. The app has no accounts, ads, analytics, or tracking, and it doesn't use the internet. Nothing about you or your games is sent to okamotodesigns or anyone else.</p>
 <h2>What stays on your device</h2>
-<p>The match in progress, so you can pick up where you left off, and whether you've seen the welcome screen. Uninstalling the app, or clearing its storage, removes both.</p>
+<p>Your games in progress, so you can pick up where you left off; your House Rules and other settings; your stats; and whether you've seen the welcome screen. They never leave your device. Uninstalling the app, or clearing its storage, removes all of it.</p>
 <h2>Links</h2>
 <p>The About screen links to the card art's source and license. Tapping one opens your browser, which handles that visit under its own privacy policy.</p>
 <h2>What the app stores may collect</h2>
