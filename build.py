@@ -335,24 +335,24 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
 
     # Hanafuda Sensei landing pages (2026-11-20; split 2026-11-21, Shadow's go).
     # Public page: hanafuda/, linked from the home page's Apps section and from the public beta flyer QR.
-    #   Beta-tester wording, TestFlight "Public beta" group, Android via the Google Group plus the closed test.
+    #   Beta-tester wording, TestFlight "Public beta" group.
     # Family page: hanafuda/family-k7q2xm/, unlisted (nothing links to it, noindex), for the family QR card.
-    #   TestFlight "Family" group (50 max) and the Play internal test. GitHub Pages can't password a page;
+    #   TestFlight "Family" group (50 max). GitHub Pages can't password a page;
     #   unlisted is the most it can do, and nothing on it is secret.
+    # Android on both pages (2026-11-22, Shadow's go): the public Play listing, an early access track with
+    #   open invites, so one tap to install. The Google Group, closed test and internal test are no longer linked.
     # Printed QR codes point at both URLs, so neither may ever move. An empty link reads "coming soon".
     HANAFUDA_FAMILY_SLUG = "family-k7q2xm"
     HANAFUDA_TF_PUBLIC = "https://testflight.apple.com/join/hw1J8Vyx"  # TestFlight "Public beta" group
     HANAFUDA_TF_FAMILY = "https://testflight.apple.com/join/rVdumQnX"  # TestFlight "Family" group, 50 max
-    HANAFUDA_GROUP = "https://groups.google.com/g/hanafuda-sensei-testers"
-    HANAFUDA_PLAY_CLOSED = "https://play.google.com/apps/testing/com.okamotodesigns.hanafuda"  # closed test opt-in (Google Group track)
-    HANAFUDA_PLAY_INTERNAL = "https://play.google.com/apps/internaltest/4701283390841648912"  # internal test opt-in (100 max)
+    HANAFUDA_PLAY = "https://play.google.com/store/apps/details?id=com.okamotodesigns.hanafuda"  # early access, open invites
 
     def step_link(url, label):
         if url:
             return f'<a class="btn" href="{url}">{label}</a>'
         return f'<span class="btn" style="opacity:.55">{label} (link coming soon)</span>'
 
-    def hanafuda_page(up, intro, tf_link, play_link):
+    def hanafuda_page(up, intro, tf_link):
         return f"""
 <div class="wrap prose">
 <div class="app" style="border:0;padding:0;background:none"><img src="{up}img/icon.png" alt=""><div><h1>Hanafuda Sensei</h1><p class="date">Learn and play Koi-Koi, from okamotodesigns</p></div></div>
@@ -366,8 +366,7 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
 </ol>
 <h2>Android</h2>
 <ol>
-<li>Tap {step_link(HANAFUDA_GROUP, "Join the tester group")}, then Join group. Use the same Google account as your Play Store.</li>
-<li>Then tap {step_link(play_link, "Get it on Google Play")}, tap Become a tester, then Download it on Google Play. Google Play may call it com.okamotodesigns.hanafuda for now. That's the right one.</li>
+<li>Tap {step_link(HANAFUDA_PLAY, "Get it on Google Play")}, then Install. It's listed as early access while it's in beta.</li>
 </ol>
 <p>Something broken or confusing? <a href="mailto:{EMAIL}?subject=Hanafuda%20Sensei%20feedback">Tell me</a>. That's the whole point of a beta.</p>
 <p class="date">Card art: the traditional-color hanafuda designs by Louie Mantia and すけじょ, card back by Spenĉjo, from <a href="https://commons.wikimedia.org/wiki/Category:SVG_Hanafuda_with_traditional_colors_(black_border)">Wikimedia Commons</a>, under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. <a href="{up}cards/">Download the card files</a>.</p>
@@ -379,14 +378,14 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
         "<p><strong>Beta testers wanted.</strong> Hanafuda is the Japanese flower card game, and Koi-Koi is its classic two-player game. "
         "Hanafuda Sensei teaches you as you play, with a coach and pictured rules. It's free, with no ads and no account. "
         "Try it, and tell me where it lost you. Pick your phone:</p>",
-        HANAFUDA_TF_PUBLIC, HANAFUDA_PLAY_CLOSED)
+        HANAFUDA_TF_PUBLIC)
     os.makedirs(os.path.join(ROOT, "hanafuda"), exist_ok=True)
     open(os.path.join(ROOT, "hanafuda", "index.html"), "w", encoding="utf-8").write(
         page("Hanafuda Sensei | okamotodesigns", "Learn and play Koi-Koi, the Japanese flower card game. Free, no ads. Beta testers wanted on iPhone and Android.", hf_public, 1, path="hanafuda/"))
 
     hf_family = hanafuda_page("../",
         "<p>This is an early test version for family. It's free, with no ads and no account. Pick your phone:</p>",
-        HANAFUDA_TF_FAMILY, HANAFUDA_PLAY_INTERNAL)
+        HANAFUDA_TF_FAMILY)
     os.makedirs(os.path.join(ROOT, "hanafuda", HANAFUDA_FAMILY_SLUG), exist_ok=True)
     open(os.path.join(ROOT, "hanafuda", HANAFUDA_FAMILY_SLUG, "index.html"), "w", encoding="utf-8").write(
         page("Hanafuda Sensei | okamotodesigns", "Hanafuda Sensei family test.", hf_family, 2,
