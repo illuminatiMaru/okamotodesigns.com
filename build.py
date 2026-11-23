@@ -151,8 +151,8 @@ def build():
 <h2>Apps I build</h2>
 <p class="sub">Small apps for the job, made by a working LD, and one for the family table.</p>
 <div class="apps">
-<a class="app" href="beamcalc/"><img src="beamcalc/img/icon.png" alt=""><div><h3>Photon BeamCalc</h3><p>Throw distance, beam size, lens angle, and raked floor pools. Now on the App Store for iPhone, and on Google Play for Android (open testing).</p></div></a>
-<a class="app" href="fixtures/"><img src="fixtures/img/icon.png" alt=""><div><h3>Photon Fixtures</h3><p>Fixture modes, DMX charts, chain math, and patch sheets on your phone, from GDTF Share and the Open Fixture Library. Now on the App Store for iPhone, and on Google Play for Android (open testing).</p></div></a>
+<a class="app" href="beamcalc/"><img src="beamcalc/img/icon.png" alt=""><div><h3>Photon BeamCalc</h3><p>Throw distance, beam size, lens angle, and raked floor pools. On the App Store for iPhone and Google Play for Android.</p></div></a>
+<a class="app" href="fixtures/"><img src="fixtures/img/icon.png" alt=""><div><h3>Photon Fixtures</h3><p>Fixture modes, DMX charts, chain math, and patch sheets on your phone, from GDTF Share and the Open Fixture Library. On the App Store for iPhone and Google Play for Android.</p></div></a>
 <a class="app" href="hanafuda/"><img src="hanafuda/img/icon.png" alt=""><div><h3>Hanafuda Sensei</h3><p>Learn and play Koi-Koi and Sakura, two classic games with Japanese flower cards. Free, no ads. Now in testing on iPhone and Android.</p></div></a>
 </div>
 </div></section>
@@ -303,7 +303,7 @@ addEventListener('keydown', ev => {{ if (ev.key === 'Escape') lb.classList.remov
 </ul>
 <div class="shots"><img src="img/1-throw-feet.jpg" alt="Throw distance screen"><img src="img/2-pool-feet.jpg" alt="Raked floor pool screen"></div>
 <p>Results assume a round beam on a level floor. Check them before you rely on them on a show. Photon BeamCalc calculates lighting beams, not structural beams, and it isn't for rigging or load calculations.</p>
-<p><strong><a href="https://apps.apple.com/us/app/photon-beamcalc/id6835239986">Download on the App Store</a></strong> for iPhone. <strong><a href="https://play.google.com/store/apps/details?id=com.okamotodesigns.photonbeamcalc">Get it on Google Play</a></strong> for Android, in open testing, so anyone can install it. <a href="privacy/">Privacy policy</a>.</p>
+<p><strong><a href="https://apps.apple.com/us/app/photon-beamcalc/id6835239986">Download on the App Store</a></strong> for iPhone. <strong><a href="https://play.google.com/store/apps/details?id=com.okamotodesigns.photonbeamcalc">Get it on Google Play</a></strong> for Android. <a href="privacy/">Privacy policy</a>.</p>
 </div>
 """
     open(os.path.join(ROOT, "beamcalc", "index.html"), "w", encoding="utf-8").write(
